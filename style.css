@@ -1,0 +1,396 @@
+:root{
+
+    --azul-1: #b2d8d8;
+    --azul-2: #66b2b2;
+    --azul-3: #008080;
+    --azul-4: #006666;
+    --azul-5: #004c4c;
+    --azul-6: #002d2d;
+    --preto: #000000;
+    --branco: #ffffff;
+    --cinza: #888888;
+}
+
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar{
+
+    width: 10px;
+    background: var(--cinza)
+}
+
+::-webkit-scrollbar-thumb{
+
+    background: var(--azul-4);
+    border-radius: 10px;
+}
+
+/* CABEÇALHO */
+
+#cabecalho{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: var(--azul-5);
+}
+
+#cabecalho img{
+
+    height: 100px;
+}
+
+#cabecalho ul{
+
+    display: flex;
+}
+
+#cabecalho ul li{
+
+    margin: 0 1em;
+}
+
+#cabecalho ul a{
+
+    color: var(--azul-2);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+#cabecalho ul a:hover{
+
+    color: var(--azul-1);
+}
+
+#cabecalho ul i{
+
+    padding-bottom: .5em;
+}
+
+/* CABEÇALHO INFERIOR */
+
+#cabecalhoInfe{
+
+    background-color: var(--azul-2);
+}
+
+#cabecalhoInfe nav{
+
+    padding: 1em;
+}
+
+#cabecalhoInfe ul{
+
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#cabecalhoInfe ul li{
+
+    margin: 0 1em;
+    color: var(--azul-6);
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+#cabecalhoInfe ul li:hover{
+
+    color: var(--azul-1);
+}
+
+/* SWIPER JS */
+
+.swiper{
+
+    width: 100%;
+    height: 60vh
+}
+
+.swiper-slide{
+
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.swiper-slide:first-child{
+
+    background-image: url(joia2-carrosel.png);
+    background-size: cover;
+}
+
+.swiper-slide:nth-child(2){
+
+    background-image: url(joia1-carrosel.jpg);
+    background-position: 0px -150px;
+    background-size: cover;
+}
+
+.swiper-slide:nth-child(3){
+
+    background-image: url(joia3-carrosel.jpg);
+    background-size: cover;
+    background-position: 0 -250px;
+}
+
+.swiper-slide:nth-child(4){
+
+    background-image: url(joia4-carrosel.jpeg);
+    background-size: cover;
+    background-position: 0 -200px;
+}
+
+.swiper-slide:last-child{ 
+
+    background-image: url(joia5-carrosel.jpeg);
+    background-size: cover;
+}
+
+.swiper-slide div{
+
+    background-color: var(--branco);
+    padding: 1em;
+    position: absolute;
+    left: 100px;
+    top: 50px;
+}
+
+.swiper-slide div h2{
+
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--azul-2);
+    text-align: start;
+}
+
+.swiper-slide div h2 span{
+
+    color: var(--azul-3);
+}
+
+.swiper-slide div h2 img{
+
+    height: 30px;
+}
+
+.swiper-pagination-bullet{
+    
+    opacity: 1;
+    background: var(--branco);
+}
+
+.swiper-pagination-bullet-active{
+
+    background: var(--azul-1);
+}
+
+/* MAIN */
+
+#main{
+
+    padding: 4em 3em;
+}
+
+#main h1{
+
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 3em;
+    margin-bottom: .5em;
+    color: var(--azul-3);
+}
+
+#mainSection{
+
+    border: 2px solid var(--azul-3);
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+
+#mainSection div{
+
+    border: 1px solid var(--azul-2);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#mainSection div:first-child{
+
+    grid-row: 1/-1;
+}
+
+#mainSection div button{
+
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: var(--azul-6);
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid var(--azul-3);
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 var(--azul-1);
+}
+
+#mainSection div button:hover{
+
+    color: var(--azul-6);
+    box-shadow: inset 0 -100px 0 0 var(--azul-1);
+}
+  
+#mainSection div button:active{
+
+    transform: scale(0.9);
+}
+
+/* RODAPE */
+
+#rodape{
+
+    background: linear-gradient(to right, var(--azul-1), var(--azul-3));
+    padding: 3em 0;
+}
+
+#rodape ul{
+
+    list-style: none;
+}
+  
+.example-2{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.example-2 .icon-content{
+
+    margin: 0 10px;
+    position: relative;
+}
+
+.example-2 .icon-content .tooltip{
+
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.example-2 .icon-content:hover .tooltip{
+
+    opacity: 1;
+    visibility: visible;
+    top: -50px;
+}
+
+.example-2 .icon-content a{
+
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: var(--branco);  
+    transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover{
+
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+
+.example-2 .icon-content a svg{
+
+    position: relative;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+}
+
+.example-2 .icon-content a:hover{
+
+    color: white;
+}
+
+.example-2 .icon-content a .filled{
+
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover .filled{
+
+    height: 100%;
+}
+  
+.example-2 .icon-content a[data-social="linkedin"] .filled,
+.example-2 .icon-content a[data-social="linkedin"] ~ .tooltip{
+
+    background-color: #0274b3;
+}
+  
+.example-2 .icon-content a[data-social="github"] .filled,
+.example-2 .icon-content a[data-social="github"] ~ .tooltip{
+
+    background-color: #24262a;
+}
+
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip{
+
+    background: linear-gradient(
+      45deg,
+      #405de6,
+      #5b51db,
+      #b33ab4,
+      #c135b4,
+      #e1306c,
+      #fd1f1f
+    );
+}

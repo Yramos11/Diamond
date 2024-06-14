@@ -1,0 +1,210 @@
+@media (max-width: 992px){
+
+/* MAIN */
+
+#mainSection{
+
+    grid-template-columns: 1fr;
+}
+
+}
+
+@media (max-width: 768px){
+
+/* CABEÇALHO */
+
+#cabecalho nav{
+
+    display: none;
+}
+
+#checkbox{
+
+    display: none;
+}
+      
+.toggle{
+
+    position: relative;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    transition-duration: .5s;
+
+}
+      
+.bars{
+
+    width: 100%;
+    height: 4px;
+    background-color: #b2d8d8;
+    border-radius: 4px;
+}
+      
+#bar2{
+
+    transition-duration: .8s;
+}
+      
+#bar1{
+
+    width: 50%;
+}
+      
+#bar2{
+
+    width: 75%;
+}
+
+.toggle{
+
+    z-index: 3;
+}
+      
+#checkbox:checked + .toggle .bars{
+
+    position: absolute;
+    transition-duration: .5s;
+}
+      
+#checkbox:checked + .toggle #bar2{
+
+    transform: scaleX(0);
+    transition-duration: .1s;
+}
+      
+#checkbox:checked + .toggle #bar1{
+
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: .5s;
+}
+      
+#checkbox:checked + .toggle #bar3{
+
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: .5s;
+}
+      
+#checkbox:checked + .toggle{
+
+    transition-duration: .5s;
+    transform: rotate(180deg);
+}
+
+.menuHamburger.desativo{
+
+    display: none;
+}
+
+.menuHamburger{
+
+    position: absolute;
+    width: 70%;
+    height: 100vh;
+    background: #008080;
+    z-index: 2;
+    right: 0;
+    top: 0;
+}
+
+.menuHamburger ul{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 100%;
+    padding: 6em 2em 0 2em;
+}
+
+.menuHamburger li{
+
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 4em;
+}
+
+.menuHamburger li i{
+
+    padding-left: .5em;
+}
+
+/* CARROSEL */
+
+.swiper-slide:first-child{
+
+    background-image: url(joia2-carrosel.png);
+}
+
+.swiper-slide:nth-child(2){
+
+    background-image: url(joia1-carrosel.jpg);
+    background-position: 0px -30px;
+}
+
+.swiper-slide:nth-child(3){
+
+    background-image: url(joia3-carrosel.jpg);
+    background-position: center;
+}
+
+.swiper-slide:nth-child(4){
+
+    background-image: url(joia4-carrosel.jpeg);
+    background-position: center;
+}
+
+/* MAIN */
+
+#mainSection{
+
+    grid-template-columns: 1fr;
+}
+}
+
+/* MEDIA 576 */
+
+@media (max-width: 576px){
+
+/* CABEÇALHO */
+
+#cabecalho img{
+
+    height: 60px;
+}
+
+/* CABEÇALHO INFERIOR */
+
+#cabecalhoInfe ul li{
+
+    font-size: .8em;
+}
+
+/* CARROSEL */
+
+.swiper{
+
+    display: none;
+}
+
+/* MAIN */
+
+#main h1{
+
+    font-size: 2em;
+}
+
+#mainSection{
+
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+}
